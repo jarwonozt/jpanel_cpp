@@ -154,7 +154,7 @@ void foodApps() {
         cout<<"+ 9. Cocolate Code "<<endl;
         cout<<"+ 10. Aquit "<<endl;
         cout<<"++++++++++++++++++++++"<<endl;
-        cout<<"Pilih menu (contoh : 33 untuk kode Ice Code): ";
+        cout<<"Pilih menu (contoh : 7 untuk kode Ice Code): ";
         cin>>kode_menu[no];
         cout<<"Jumlah Pesanan : ";
         cin>>porsi[no];
