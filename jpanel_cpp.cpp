@@ -1,5 +1,5 @@
 #include<iostream>
-#include<string>
+// #include<string>
 #include<cstdlib>
 using namespace std;
 
@@ -61,6 +61,7 @@ void temperatureApps() {
     cout<<"+ \t\t\tBy Jarwonozt   +"<<endl;
     cout<<"++++++++++++++++++++++++++++++++++++++++"<<endl;
 
+    //menggunakan perulangan do while
     do{
         x++;
         cout<<"________________________________________\n"<<endl;
@@ -82,9 +83,9 @@ void temperatureApps() {
                 cout<<"\n";
                 cout<<"Untuk melakukan swab tes silakan isi data berikut \n";
                 cout<<"NIK\t\t\t: ";
-                cin>>jarwonozt.nik;
+                cin>>jarwonozt.nik; //input data varivael nik pada objek jarwonozt yang memanggil kelas temperaturClass
                 cout<<"Nama sesuai KTP\t\t: ";
-                getline(cin>>ws, jarwonozt.nama);
+                getline(cin>>ws, jarwonozt.nama); //input data dengan spasi / withspace
                 cout<<"Umur \t\t\t: ";
                 cin>>jarwonozt.umur;
                 cout<<"Alamat susuai KTP \t: ";
@@ -165,7 +166,7 @@ void foodApps() {
 
     for(int i = 2; i <= no; i++){   
             if(kode_menu[i] == 1){
-                menu[i] = "NChicken Syntak";
+                menu[i] = "Chicken Syntak";
                 harga[i] = 13000;
                 if(porsi[i] > 5){
                     diskon[i] = 20; // 30%
@@ -333,30 +334,36 @@ void foodApps() {
 
 int main() {
     system("Color 0A");
-    int select;
+    int select, no = 1;
+
 
     cout<<"_______________________________________"<<endl;
     cout<<"\t\tJARWONOTECH PANEL"<<endl;
     cout<<"---------------------------------------"<<endl;
-    cout<<"Silakan pilih menu :"<<endl;
-    cout<<"1. Simple Temperature Detector [BETA]"<<endl;
-    cout<<"2. Pesan Makanan"<<endl;
-    cout<<"\n"<<endl;
-    cout<<"Masukan Pilihan : ";
-    cin>>select;
-
-    switch (select)
-    {
-    case 1:
+    do{
+        no++;
         temperatureApps();
-        break;
-    case 2:
         foodApps();
-        break;
+    }while(no > 0);
+    // cout<<"Silakan pilih menu :"<<endl;
+    // cout<<"1. Simple Temperature Detector [BETA]"<<endl;
+    // cout<<"2. Pesan Makanan"<<endl;
+    // cout<<"\n"<<endl;
+    // cout<<"Masukan Pilihan : ";
+    // cin>>select;
+
+    // switch (select)
+    // {
+    // case 1:
+    //     temperatureApps();
+    //     break;
+    // case 2:
+    //     foodApps();
+    //     break;
     
-    default:
-        cout<<"Pilihan belum tersedia"<<endl;
-    }
+    // default:
+    //     cout<<"Pilihan belum tersedia"<<endl;
+    // }
     return 0;
 }
 
